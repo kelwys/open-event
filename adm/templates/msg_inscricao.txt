@@ -1,0 +1,13 @@
+Muito obrigada por se inscrever no Open Event.
+
+Estes foram os dados que você nos forneceu
+em sua inscrição:
+
+Nome: {{ inscrito.name }}
+CPF: {{ inscrito.cpf }}
+Email: {{ inscrito.email }}
+Telefone: {{ inscrito.phone }}
+
+Em até 48 horas úteis, a nossa equipe entrará
+em contato com vocie para concluirmos a sua
+matrícula.
