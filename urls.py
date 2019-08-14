@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path
-from open_event.adm.views import home, inscricao, detail
+from open_event.evento.views import home, inscricao, detail
 
 urlpatterns = [
     url(r'^$', home, name='home'),

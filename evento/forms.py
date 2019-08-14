@@ -1,7 +1,7 @@
 from django import forms
 from django.core.exceptions import ValidationError
-from open_event.adm.models import Inscrito
-from open_event.adm.utils.views import validate_cpf
+from open_event.evento.models import Inscrito
+from open_event.evento.utils.views import validate_cpf
 
 
 class InscritoFormOld(forms.Form):

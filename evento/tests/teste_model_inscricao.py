@@ -1,5 +1,5 @@
 from django.test import TestCase
-from open_event.adm.models import Inscrito
+from open_event.evento.models import Inscrito
 
 
 class InscricaoModelTest(TestCase):

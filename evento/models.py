@@ -1,7 +1,7 @@
 from enum import Enum
 
 from django.db import models
-from open_event.adm.utils.views import validate_cpf
+from open_event.evento.utils.views import validate_cpf
 
 
 class Inscrito(models.Model):

@@ -1,7 +1,7 @@
 from django.test import TestCase
 from django.shortcuts import resolve_url as r
-from open_event.adm.forms import InscritoForm
-from open_event.adm.models import Inscrito
+from open_event.evento.forms import InscritoForm
+from open_event.evento.models import Inscrito
 
 
 class InscricaoTest(TestCase):

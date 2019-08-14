@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.utils.html import format_html
 
-from open_event.adm.models import Inscrito, Palestrante
+from open_event.evento.models import Inscrito, Palestrante
 
 
 class InscritoModelAdmin(admin.ModelAdmin):

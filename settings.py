@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'test_without_migrations',
     # 'django_extensions',
-    'open_event.adm.apps.AdmConfig',
+    'open_event.evento.apps.AdmConfig',
 ]
 
 MIDDLEWARE = [

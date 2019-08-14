@@ -3,8 +3,8 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.template.loader import render_to_string
 
-from open_event.adm.forms import InscritoForm
-from open_event.adm.models import Inscrito
+from open_event.evento.forms import InscritoForm
+from open_event.evento.models import Inscrito
 
 
 def home(request):
