@@ -1817,6 +1817,9 @@ footer .newsletter_form .form-control {
 .copyright_footer {
   background-color: #080113;
   padding: 15px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
 }
 .copyright_footer p {
   font-size: 13px;
@@ -3066,7 +3069,8 @@ Cover
   min-height: 400px;
 }
 
-.form-control {
+.form-control,
+#form-inscricao .form-group input {
   font-size: 12px;
   padding: 12px 15px;
   height: 50px;
@@ -3079,7 +3083,8 @@ Cover
   -webkit-transition: all ease-in-out 0.4s;
   transition: all ease-in-out 0.4s;
 }
-.form-control:focus {
+.form-control:focus,
+#form-inscricao .form-group input:focus {
   background-color: #ffffff;
   border-color: #f50136;
   -webkit-transition: all ease-in-out 0.4s;
@@ -3090,6 +3095,28 @@ textarea.form-control {
   min-height: 200px;
   resize: vertical;
 }
+
+
+#form-inscricao .form-group label{
+  width: 19%;
+}
+
+#form-inscricao .form-group input{
+  width: 80%;
+}
+
+#form-inscricao .form-group .errorlist{
+  color: #f50136;
+  padding-left: 20%;
+}
+
+#form-inscricao .form-group .errorlist li {
+  list-style-type: none;
+  line-height: 20px;
+}
+
+
+
 
 /*  ----------------------------------------------------
 12 progressbar
