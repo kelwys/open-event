@@ -1,4 +1,5 @@
 from django.core.exceptions import ValidationError
+from django.utils.html import format_html
 
 
 def validate_cpf(value):

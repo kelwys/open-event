@@ -81,6 +81,7 @@
             </div>
             <div class="col-md-6 col-12">
                 <div class="contact_form">
+                    {% csrf_token %}
                     <form action="." novalidate method="post">
                         {% csrf_token %}
                         <div class="form-group">

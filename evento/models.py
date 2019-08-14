@@ -44,6 +44,7 @@ class Patrocinio(models.Model):
 
 class Palestrante(models.Model):
     name = models.CharField('nome', max_length=255)
+    social_midia = models.CharField('social midia', max_length=20, blank=True)
     photo = models.URLField('foto')
     website = models.URLField('website', blank=True)
     description = models.TextField('descrição', blank=True)

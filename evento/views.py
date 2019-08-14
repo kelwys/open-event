@@ -4,11 +4,12 @@ from django.shortcuts import render
 from django.template.loader import render_to_string
 
 from open_event.evento.forms import InscritoForm
-from open_event.evento.models import Inscrito
+from open_event.evento.models import Inscrito, Palestrante
 
 
 def home(request):
-    return render(request, 'index.html')
+    palestrantes = Palestrante.objects.all()
+    return render(request, 'index.html', {'palestrantes': palestrantes})
 
 
 def detail(request, pk):

@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+from os.path import normpath, join
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -69,6 +71,15 @@ TEMPLATES = [
         },
     },
 ]
+
+
+STATICFILES_DIRS = (
+    # normpath(join(BASE_DIR, 'static')),
+    # normpath(join(BASE_DIR, 'upload')),
+)
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 
 WSGI_APPLICATION = 'open_event.wsgi.application'
 
