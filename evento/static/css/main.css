@@ -1707,6 +1707,12 @@ header.sticky_header {
   transition: all ease-in-out 0.4s;
 }
 
+.top-inscricao{
+  background-color: #000000 !important;
+  margin-top: 0px;
+
+}
+
 .navbar-toggler {
   border: 1px solid #ffffff;
   color: #ffffff;
@@ -1817,10 +1823,9 @@ footer .newsletter_form .form-control {
 .copyright_footer {
   background-color: #080113;
   padding: 15px;
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
 }
+
+
 .copyright_footer p {
   font-size: 13px;
   padding: 10px;
