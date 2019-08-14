@@ -1,19 +1,32 @@
-<header class="header header-inline min-h-3 row desktop-12 container" role="banner">
-
-    <div class="site-logo">
-        <h1><a href="/" rel="home">OpenEvent</a></h1>
-        <p class="site-description screen-reader-only">Livre!</p>
+<!--header start here -->
+{% load static %}
+<header class="header navbar fixed-top navbar-expand-md sticky_header">
+    <div class="container">
+        <a class="navbar-brand logo" href="#">
+            <img src="{% static 'img/logo.png' %}" alt="OpenEvent"/>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#headernav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="lnr lnr-text-align-right"></span>
+        </button>
+        <div class="collapse navbar-collapse flex-sm-row-reverse" id="headernav">
+            <ul class=" nav navbar-nav menu">
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'home' %}#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="{% url 'home' %}#sobre">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="{% url 'home' %}#palestrantes">Palestrantes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="{% url 'home' %}#agenda">Agenda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="{% url 'home' %}#patrocinadores">Patrocinadores</a>
+                </li>
+            </ul>
+        </div>
     </div>
-
-    <nav class="nav-inline" role="navigation">
-        <a href="javascript:void(0);" class="nav-mobile"><i class="fa fa-bars"></i></a>
-        <ul>
-            <li><a data-scroll href="{% url 'home' %}#overview">Sobre</a></li>
-            <li><a data-scroll href="{% url 'home' %}#speakers">Palestrantes</a></li>
-            <li><a data-scroll href="{% url 'home' %}#sponsors">Patrocinadores</a></li>
-            <li><a data-scroll href="{% url 'home' %}#register">Inscrição</a></li>
-            <li><a data-scroll href="{% url 'home' %}#venue">Local</a></li>
-        </ul>
-    </nav>
-
 </header>
+<!--header end here-->

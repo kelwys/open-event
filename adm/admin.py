@@ -1,5 +1,7 @@
 from django.contrib import admin
-from open_event.adm.models import Inscrito
+from django.utils.html import format_html
+
+from open_event.adm.models import Inscrito, Palestrante
 
 
 class InscritoModelAdmin(admin.ModelAdmin):
@@ -8,4 +10,21 @@ class InscritoModelAdmin(admin.ModelAdmin):
     list_filter = ('date',)
 
 
+class PalestranteModelAdmin(admin.ModelAdmin):
+    list_display = ['name', 'photo_img', 'website_link']
+
+    def website_link(self, obj):
+        return format_html('<a href="{0}">{0}</a>', obj.website)
+
+    website_link.allow_tags = True
+    website_link.short_description = 'website'
+
+    def photo_img(self, obj):
+        return format_html('<img width="32px" src="{}"/>', obj.photo)
+
+    photo_img.allow_tags = True
+    photo_img.short_description = 'foto'
+
+
 admin.site.register(Inscrito, InscritoModelAdmin)
+admin.site.register(Palestrante, PalestranteModelAdmin)

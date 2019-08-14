@@ -44,7 +44,6 @@ class Patrocinio(models.Model):
 
 class Palestrante(models.Model):
     name = models.CharField('nome', max_length=255)
-    slug = models.SlugField('slug')
     photo = models.URLField('foto')
     website = models.URLField('website', blank=True)
     description = models.TextField('descrição', blank=True)
