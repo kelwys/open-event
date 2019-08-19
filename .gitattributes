@@ -2,6 +2,10 @@
 
 # Basic .gitattributes for a python repo.
 
+$ cat .gitattributes
+*.html linguist-language=Python
+*.css linguist-language=Python
+
 # Source files
 # ============
 *.pxd    text diff=python
