@@ -33,7 +33,7 @@ class InscricaoTest(TestCase):
         self.assertContains(self.response, 'csrfmiddlewaretoken')
 
     def test_has_form(self):
-        """Context must have subscription form"""
+        """Context deve ter um form de inscricao"""
         form = self.response.context['form']
         self.assertIsInstance(form, InscritoForm)
 
@@ -61,7 +61,7 @@ class PostInvalido(TestCase):
         self.response = self.client.post(r('/inscricao/'), {})
 
     def test_post(self):
-        """Invalid POST should not redirect"""
+        """Invalid POST não deve fazer o redirect"""
         self.assertEqual(200, self.response.status_code)
 
     def test_template(self):

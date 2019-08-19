@@ -1,0 +1,42 @@
+{% extends "evento/_layouts/base_site.html" %}
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+<a href="/admin/">Início</a>
+› <a href="/admin/evento/">Controle de Evento</a>
+› <a href="/admin/evento/inscrito/">Inscrições</a>
+› Inscrições em Lote
+</div>
+{% endblock %}
+
+{% block content %}
+    {% block object-tools %}
+        {% if x %}
+            <ul class="messagelist">
+              <li class="success">Inscrições realizadas com sucesso! <a href="/admin/evento/inscrito/">Visualize aqui!</a></li>
+            </ul>
+        {% endif %}
+        <h1>Adicionar Inscrições em Lote</h1>
+        <div id="content-main">
+            <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+                <fieldset>
+                    {{ form.media }}
+                    {% for field in form %}
+                        <div class="form-row field-arquivo">
+                            <div>
+                                <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                                {{ field }}
+                                {{ field.errors }}
+                            </div>
+
+                        </div>
+                    {% endfor %}
+                </fieldset>
+                <div>
+                    <input type="submit" value="Enviar" class="default" name="_enviar">
+                </div>
+            </form>
+        </div>
+    {% endblock %}
+{% endblock %}

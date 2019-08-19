@@ -16,14 +16,14 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path
-from open_event.evento.views import home, inscricao, detail
+from open_event.evento.views import home, inscricao_individual, detail, inscricao_lote
 
 urlpatterns = [
     url(r'^$', home, name='home'),
-    path('inscricao/', inscricao),
+    path('inscricao/', inscricao_individual),
     path('inscricao/<int:pk>/', detail),
     path('admin/', admin.site.urls),
+    path('admin/inscricao_lote/', inscricao_lote),
 ]
-admin.site.site_header = "OpenEvent"
 admin.site.site_title = "OpenEvent Admin Portal"
 admin.site.index_title = "Seja bem vindo ao OpenEvent"
