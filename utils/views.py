@@ -1,5 +1,4 @@
 from django.core.exceptions import ValidationError
-from django.utils.html import format_html
 
 
 def validate_cpf(value):
@@ -8,3 +7,5 @@ def validate_cpf(value):
 
     if len(value) != 11:
         raise ValidationError('CPF deve ter 11 números.', 'length')
+
+
