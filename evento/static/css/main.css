@@ -2688,10 +2688,13 @@ Cover
   background-color: #f0f2f6;
 }
 .table.event_calender tbody td, .table.event_calender tbody th {
-  padding: 30px 25px;
+  padding: 15px 25px;
   border: 0;
   vertical-align: middle;
-  text-align: center;
+  text-align: left;
+}
+.event_box th {
+  padding: 10px 25px;
 }
 .table.event_calender tbody td img, .table.event_calender tbody th img {
   border-radius: 4px;

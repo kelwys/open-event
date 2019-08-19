@@ -59,7 +59,7 @@ class Palestrante(models.Model):
 
 class Agenda(models.Model):
     palestrante = models.ForeignKey('Palestrante', on_delete=models.PROTECT)
-    nome_palestra = models.CharField('Nome da Palestra', max_length=20)
+    nome_palestra = models.CharField('Nome da Palestra', max_length=50)
     date = models.DateField('Data')
     time = models.TimeField('Hora')
 
