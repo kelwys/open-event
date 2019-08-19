@@ -1,7 +1,7 @@
 from django import forms
 from django.core.exceptions import ValidationError
 from open_event.evento.models import Inscrito
-from open_event.evento.utils.views import validate_cpf
+from open_event.utils.views import validate_cpf
 
 
 class InscritoFormOld(forms.Form):
@@ -28,3 +28,14 @@ class InscritoForm(forms.ModelForm):
             raise ValidationError('Informe seu e-mail ou telefone.')
 
         return self.cleaned_data
+
+
+class InscricaoLoteForm(forms.Form):
+    arquivo = forms.FileField(label='Arquivo: ')
+
+    def clean(self):
+        cleaned_data = super(InscricaoLoteForm, self).clean()
+        arquivo = cleaned_data.get("arquivo")
+
+        if not arquivo:
+            raise forms.ValidationError("Insira um arquivo.")
