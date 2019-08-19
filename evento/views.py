@@ -5,13 +5,14 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render
 
 from open_event.evento.forms import InscritoForm, InscricaoLoteForm
-from open_event.evento.models import Inscrito, Palestrante, Agenda
+from open_event.evento.models import Inscrito, Palestrante, Agenda, Patrocinio
 
 
 def home(request):
     palestrantes = Palestrante.objects.all()
     agenda = Agenda.objects.all()
-    context = {'palestrantes': palestrantes, 'agenda': agenda}
+    patrocinio = Patrocinio.objects.all()
+    context = {'palestrantes': palestrantes, 'agenda': agenda, 'patrocinio': patrocinio}
     return render(request, 'index.html', context)
 
 

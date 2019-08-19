@@ -10,8 +10,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!-- ========== Title ========== -->
     <title>OpenEvent</title>
-    <!-- ========== Favicon Ico ========== -->
-    <!--<link rel="icon" href="fav.ico">-->
     <!-- ========== STYLESHEETS ========== -->
     <!-- Bootstrap CSS -->
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
@@ -95,46 +93,8 @@
 </section>
 <!--cover section slider end -->
 
-<!--event info -->
-<section class="pt100 pb100">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-6 col-md-3  ">
-                <div class="icon_box_two">
-                    <i class="ion-ios-calendar-outline"></i>
-                    <div class="content">
-                        <h5 class="box_title">
-                            DATA
-                        </h5>
-                        <p>
-                            12-14 february 2018
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-3  ">
-                <div class="icon_box_two">
-                    <i class="ion-ios-location-outline"></i>
-                    <div class="content">
-                        <h5 class="box_title">
-                            LOCALIZAÇÃO
-                        </h5>
-                        <p>
-                            Los Angeles, CA.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--event info end -->
-
-
-
 <!--about the event -->
-<section id="sobre" class="pt100 pb100">
+<section id="sobre" class="pt100 pb10">
     <div class="container">
         <div class="section_title">
             <h3 class="title">
@@ -163,9 +123,43 @@
     </div>
 </section>
 <!--about the event end -->
+<!--event info -->
+<section class="pb10">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-6 col-md-3  ">
+                <div class="icon_box_two">
+                    <i class="ion-ios-calendar-outline"></i>
+                    <div class="content">
+                        <h5 class="box_title">
+                            DATA
+                        </h5>
+                        <p>
+                            12 e 13 Outubro 2019
+                        </p>
+                    </div>
+                </div>
+            </div>
 
+            <div class="col-6 col-md-3  ">
+                <div class="icon_box_two">
+                    <i class="ion-ios-location-outline"></i>
+                    <div class="content">
+                        <h5 class="box_title">
+                            LOCALIZAÇÃO
+                        </h5>
+                        <p>
+                            Vitória, ES.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--event info end -->
 <!--speaker section-->
-<div class="rounded keynote" id="section-keynote">
+<div class="rounded keynote pt100 pb100" id="palestrantes">
     <div class="container">
         <div class="section_title mb50">
             <h3 class="title">
@@ -189,7 +183,7 @@
 
 
 <!--event calender-->
-<section id="agenda" class="pb100">
+<section id="agenda" class="pt100 pb100">
     <div class="container">
         <div class="table-responsive">
             <table class="event_calender table">
@@ -253,22 +247,12 @@
             </h3>
         </div>
         <div class="brand_carousel owl-carousel">
-            <div class="brand_item text-center">
-                <img src="{% static 'img/brands/b1.png' %}" alt="brand">
+            {% for pat in patrocinio %}
+                <div class="brand_item text-center">
+                <img src="{{ pat.photo }}" alt="brand">
             </div>
-            <div class="brand_item text-center">
-                <img src="{% static 'img/brands/b2.png' %}" alt="brand">
-            </div>
+            {% endfor %}
 
-            <div class="brand_item text-center">
-                <img src="{% static 'img/brands/b3.png' %}" alt="brand">
-            </div>
-            <div class="brand_item text-center">
-                <img src="{% static 'img/brands/b4.png' %}" alt="brand">
-            </div>
-            <div class="brand_item text-center">
-                <img src="{% static 'img/brands/b5.png' %}" alt="brand">
-            </div>
         </div>
     </div>
 </section>
