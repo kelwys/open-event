@@ -1,7 +1,7 @@
 from enum import Enum
 
 from django.db import models
-from open_event.evento.utils.views import validate_cpf
+from open_event.utils.views import validate_cpf
 
 
 class Inscrito(models.Model):
@@ -55,3 +55,17 @@ class Palestrante(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Agenda(models.Model):
+    palestrante = models.ForeignKey('Palestrante', on_delete=models.PROTECT)
+    nome_palestra = models.CharField('Nome da Palestra', max_length=20)
+    date = models.DateField('Data')
+    time = models.TimeField('Hora')
+
+    class Meta:
+        verbose_name = 'Agenda'
+        verbose_name_plural = 'Agendas'
+
+    def __str__(self):
+        return self.nome_palestra

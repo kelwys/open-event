@@ -1,13 +1,16 @@
 from django.contrib import admin
 from django.utils.html import format_html
-
-from open_event.evento.models import Inscrito, Palestrante, Patrocinio
+from open_event.evento.models import Inscrito, Palestrante, Patrocinio, Agenda
 
 
 class InscritoModelAdmin(admin.ModelAdmin):
+    change_list_template = 'evento/_layouts/inscricao_lote_changelist.html'
+
     list_display = ('name', 'email', 'phone', 'cpf', 'date')
     search_fields = ('name', 'email', 'cpf')
     list_filter = ('date',)
+
+    actions = ["export_as_csv"]
 
 
 class PalestranteModelAdmin(admin.ModelAdmin):
@@ -36,6 +39,11 @@ class PatrocinioModelAdmin(admin.ModelAdmin):
     photo_img.short_description = 'foto'
 
 
+class AgendaModelAdmin(admin.ModelAdmin):
+    list_display = ['palestrante', 'nome_palestra', 'date', 'time']
+
+
 admin.site.register(Inscrito, InscritoModelAdmin)
 admin.site.register(Palestrante, PalestranteModelAdmin)
 admin.site.register(Patrocinio, PatrocinioModelAdmin)
+admin.site.register(Agenda, AgendaModelAdmin)
