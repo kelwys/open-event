@@ -1,7 +1,7 @@
 # OpenEvent
 
 Um sistema online para gerenciamento de evento.
-Permite receber inscrisões online. Realizar cadastro de palestrantes, agendas, patrocinadores e realizacão de inscriões
+Permite receber inscrisões online. Realizar cadastro de palestrantes, agendas, patrocinadores e realizacão de inscrições
  em lote por meio de arquivo csv. 
 ## Requisitos
 - Python 3.6
