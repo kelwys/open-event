@@ -10,8 +10,6 @@ class InscritoModelAdmin(admin.ModelAdmin):
     search_fields = ('name', 'email', 'cpf')
     list_filter = ('date',)
 
-    actions = ["export_as_csv"]
-
 
 class PalestranteModelAdmin(admin.ModelAdmin):
     list_display = ['name', 'photo_img', 'website_link']
