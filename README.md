@@ -89,7 +89,7 @@ The following tools were used in the construction of the project:
 
 - **[Python](https://www.python.org/)**
 - **[Django](https://docs.djangoproject.com/en/3.2/)**
-- **[HTML](hhttps://en.wikipedia.org/wiki/HTML)**
+- **[HTML](https://en.wikipedia.org/wiki/HTML)**
 - **[Sass](https://sass-lang.com/guide)**
 
 ---
